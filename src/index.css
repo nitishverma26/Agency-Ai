@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #2563eb;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+}
+
+html {
+  min-height: 100vh;
+  background-color: white;
+  transition: background-color 300ms;
+  overflow-x: hidden;
+}
+
+html.dark {
+  background-color: black;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Custom cursor only on desktop with mouse */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none;
+  }
+}
+
+.custom-cursor {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor {
+    display: block;
+  }
+}
